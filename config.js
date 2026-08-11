@@ -16,7 +16,7 @@
  * Topic charset: [-_A-Za-z0-9], max 64 chars, no leading "ntfy.sh/".
  */
 export const CONFIG = {
-  TOPIC: "fam-alerts-demo-2026", // topic is the shared secret — change per pair, keep unguessable
+  TOPIC: "gomokelategomo-sjhasjhsa", // topic is the shared secret — change per pair, keep unguessable
   MAX_MESSAGE_LENGTH: 200,       // ALRT-02 limit, enforced in script.js
   SENDER_NAME: "Family",         // used as custom-message title prefix
 };
