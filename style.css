@@ -177,6 +177,28 @@ input:focus-visible {
   font-size: 14px;
 }
 
+footer {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  text-decoration: underline;
+}
+
+#footer-link {
+  margin-top: var(--space-xs);
+}
+
 #alert-popup {
   position: fixed;
   inset: 0;
