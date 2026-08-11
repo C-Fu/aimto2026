@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Alerts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1 id="app-title">Family Alerts 👨‍👩‍👧</h1>
+    </header>
+
+    <section id="sender">
+      <h2>Send an alert</h2>
+      <div id="preset-grid"></div>
+      <form id="custom-form">
+        <label for="custom-input">Custom message</label>
+        <input type="text" id="custom-input" maxlength="200" placeholder="Type a short message… (up to 200 characters)" autocomplete="off">
+        <span id="char-count" aria-hidden="true"></span>
+        <button type="submit" id="send-btn">Send</button>
+      </form>
+      <p id="status" aria-live="polite" role="status"></p>
+    </section>
+
+    <section id="receiver">
+      <h2>Receiving alerts</h2>
+      <p id="receiver-hint">Keep this tab open to receive alerts. Or install the ntfy app and subscribe to your topic.</p>
+    </section>
+  </main>
+
+  <div id="alert-popup" class="alert-popup" role="alertdialog" aria-labelledby="popup-title" aria-hidden="true" hidden>
+    <div>
+      <h3 id="popup-title"></h3>
+      <p id="popup-message"></p>
+      <button type="button" id="popup-close">OK</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
