@@ -6,6 +6,22 @@ Apl web kecil tanpa pelayan (backend) yang membolehkan ahli keluarga menghantar 
 
 ---
 
+## 📽️ Media & bahan pembentangan
+
+**Tonton demo (2 minit):**
+
+<video src="Family_Alert_System.mp4" controls style="max-width:100%;"></video>
+
+**Slaid pembentangan:**
+- 🇲🇾 [Family Alert System — Malaysia Pitch](Family%20Alert%20System%20-%20Malaysia%20Pitch.pptx) — slaid pitch (PowerPoint)
+- 📶 [Signal Over Noise](Signal_Over_Noise.pptx) — slaid konsep (PowerPoint)
+
+**Pitch satu imej:**
+
+![Custom Family Alert System Guide](Custom_Family_Alert_System_Guide.png)
+
+---
+
 ## Apa ini
 
 Sebuah laman web statik satu halaman. Pengirim menekan butang pratetap (atau menaip mesej emoji pendek) dan ia terus sampai ke **topik ntfy** keluarga. Penerima melihatnya sebagai pemberitahuan push (pada apl ntfy telefon) atau sebagai popup dalam laman dengan bunyi (pada tab pelayar). Tiada pelayan belakang, tiada akaun, tiada pendaftaran.

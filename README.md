@@ -6,6 +6,22 @@ A tiny, no-backend web app that lets family members send quick alerts and short 
 
 ---
 
+## 📽️ Media & pitch materials
+
+**Watch the demo (2 min):**
+
+<video src="Family_Alert_System.mp4" controls style="max-width:100%;"></video>
+
+**Slide decks:**
+- 🇲🇾 [Family Alert System — Malaysia Pitch](Family%20Alert%20System%20-%20Malaysia%20Pitch.pptx) — pitch deck (PowerPoint)
+- 📶 [Signal Over Noise](Signal_Over_Noise.pptx) — concept deck (PowerPoint)
+
+**One-image pitch:**
+
+![Custom Family Alert System Guide](Custom_Family_Alert_System_Guide.png)
+
+---
+
 ## What this is
 
 A static single-page website. The sender taps a preset button (or types a short emoji message) and it is instantly delivered to the family's **ntfy topic**. The receiver sees it as a push notification (on the ntfy phone app) or as an in-page popup with a sound (on a browser tab). No backend, no accounts, no sign-ups.
