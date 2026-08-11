@@ -96,6 +96,8 @@ Go to https://github.com and sign up for a free account (if you don't have one).
 3. Set **Branch** to `master` (or `main`) and folder to `/ (root)`. Click **Save**.
 4. Wait about 1 minute. GitHub will show you your live address — something like `https://YOUR-NAME.github.io/aimto2026/`.
 
+> 📖 For the full step-by-step guide (turning it on, finding your URL, updating, troubleshooting, custom domain), see **["How to enable & use GitHub Pages"](#how-to-enable--use-github-pages-complete-guide)** below.
+
 ### Step 6 — Tell your family
 1. Send everyone the link to your live site (from Step 5).
 2. Ask them to **install the free ntfy app** (Android or iOS) and subscribe to your topic:
@@ -111,6 +113,55 @@ Change the `label` (what the button says), the `emoji`, and the `priority` (`def
 
 ### Rotating a leaked topic
 If your topic leaks, change it back in `config.js` (Step 4), commit, and tell everyone to subscribe to the new one. That instantly revokes the old one.
+
+---
+
+## How to enable & use GitHub Pages (complete guide)
+
+GitHub Pages is the **free web hosting** that publishes your repository as a website. This project needs no build step — you just tell GitHub to serve the files, and it does.
+
+### A. Turn on GitHub Pages (5 minutes)
+
+1. Go to your forked repository on github.com (e.g. `https://github.com/YOUR-NAME/aimto2026`).
+2. Click **Settings** (the tab near the top-right of the repo page).
+3. In the left sidebar, click **Pages** (under "Code and automation").
+4. Under **Build and deployment → Source**, click the dropdown and choose **Deploy from a branch**.
+5. Under **Branch**, click the dropdown and choose your branch — `master` or `main` (whichever exists in your fork).
+6. Next to the branch, keep the folder as **`/ (root)`**.
+7. Click **Save**.
+8. Wait about 1–2 minutes. GitHub is building your site.
+
+> 💡 If you don't see a `Pages` option, your repo may be empty or you may be on the wrong repository — make sure you're on **your fork**, not the original.
+
+### B. Find your live website address
+
+- Your site URL is automatically: `https://YOUR-NAME.github.io/aimto2026/`
+- (If your repo is named differently, the last part changes to match: `https://YOUR-NAME.github.io/REPO-NAME/`)
+- GitHub shows the URL at the top of the **Settings → Pages** page once the build finishes.
+- You can also check under the **Actions** tab — a green checkmark means the deploy succeeded.
+
+### C. Update your site after changes
+
+Every time you change files (e.g. edit `config.js` or the presets) and click **Commit changes** on GitHub, Pages **automatically re-publishes** the site. Wait ~1 minute and refresh your page to see the update.
+
+### D. Troubleshooting
+
+| Symptom | Fix |
+|---------|-----|
+| Site shows "404" or blank | Wait 2 more minutes (first build takes longest). Then check **Actions** tab for a green checkmark. |
+| You see the folder listing, not the app | You selected a wrong branch/folder in Step A — it must be branch `master`/`main` and folder `/ (root)`. |
+| Styles/sounds missing | Your browser cached an old version — hard refresh (Ctrl+Shift+R on desktop). |
+| Red ✗ in Actions | Open the failed run, read the message, and ask for help (or open a GitHub issue). |
+| `YOUR-NAME.github.io` isn't loading | You need at least one file in the repo root — this project already has `index.html`, so this only happens on empty repos. |
+
+### E. Make it your own address (optional)
+
+You can use a custom domain (e.g. `alerts.myfamily.com`) instead of the default URL:
+
+1. Buy a domain from any registrar.
+2. In the registrar's DNS settings, add a CNAME record pointing to `YOUR-NAME.github.io`.
+3. In **Settings → Pages → Custom domain**, enter your domain and click **Save**.
+4. Enable **Enforce HTTPS** after DNS propagates (a few hours).
 
 ---
 

@@ -96,6 +96,8 @@ Pergi ke https://github.com dan daftar akaun percuma (jika anda belum ada).
 3. Tetapkan **Branch** kepada `master` (atau `main`) dan folder kepada `/ (root)`. Klik **Save**.
 4. Tunggu kira-kira 1 minit. GitHub akan menunjukkan alamat langsung anda — seperti `https://NAMA-ANDA.github.io/aimto2026/`.
 
+> 📖 Untuk panduan langkah demi langkah penuh (menghidupkannya, mencari URL anda, mengemas kini, penyelesaian masalah, domain tersuai), lihat **["Cara mengaktifkan & menggunakan GitHub Pages"](#cara-mengaktifkan--menggunakan-github-pages-panduan-lengkap)** di bawah.
+
 ### Langkah 6 — Beritahu keluarga anda
 1. Hantar semua orang pautan ke laman langsung anda (dari Langkah 5).
 2. Minta mereka **pasang aplikasi ntfy percuma** (Android atau iOS) dan melanggan topik anda:
@@ -111,6 +113,55 @@ Tukar `label` (apa yang tertulis pada butang), `emoji`, dan `priority` (`default
 
 ### Memutar topik yang bocor
 Jika topik anda bocor, tukar kembali dalam `config.js` (Langkah 4), commit, dan beritahu semua orang melanggan topik baharu. Ini serta-merta membatalkan topik lama.
+
+---
+
+## Cara mengaktifkan & menggunakan GitHub Pages (panduan lengkap)
+
+GitHub Pages ialah **pengehosan web percuma** yang menerbitkan repositori anda sebagai laman web. Projek ini tidak memerlukan langkah binaan — anda hanya memberitahu GitHub untuk menghidangkan fail, dan ia berbuat demikian.
+
+### A. Hidupkan GitHub Pages (5 minit)
+
+1. Pergi ke repositori fork anda di github.com (cth. `https://github.com/NAMA-ANDA/aimto2026`).
+2. Klik **Settings** (tab berhampiran penjuru kanan atas halaman repo).
+3. Dalam bar sisi kiri, klik **Pages** (di bawah "Code and automation").
+4. Di bawah **Build and deployment → Source**, klik dropdown dan pilih **Deploy from a branch**.
+5. Di bawah **Branch**, klik dropdown dan pilih cabang anda — `master` atau `main` (mana-mana yang wujud dalam fork anda).
+6. Di sebelah cabang, kekalkan folder sebagai **`/ (root)`**.
+7. Klik **Save**.
+8. Tunggu kira-kira 1–2 minit. GitHub sedang membina laman anda.
+
+> 💡 Jika anda tidak nampak pilihan `Pages`, repositori anda mungkin kosong atau anda mungkin berada di repositori yang salah — pastikan anda berada di **fork anda**, bukan yang asal.
+
+### B. Cari alamat laman langsung anda
+
+- URL laman anda secara automatik ialah: `https://NAMA-ANDA.github.io/aimto2026/`
+- (Jika repositori anda dinamakan berbeza, bahagian akhir berubah mengikutnya: `https://NAMA-ANDA.github.io/NAMA-REPO/`)
+- GitHub menunjukkan URL di bahagian atas halaman **Settings → Pages** sebaik binaan selesai.
+- Anda juga boleh semak di bawah tab **Actions** — tanda semak hijau bermaksud deploy berjaya.
+
+### C. Kemas kini laman anda selepas perubahan
+
+Setiap kali anda menukar fail (cth. mengedit `config.js` atau pratetap) dan klik **Commit changes** di GitHub, Pages **secara automatik menerbitkan semula** laman. Tunggu ~1 minit dan segarkan halaman anda untuk melihat kemas kini.
+
+### D. Penyelesaian masalah
+
+| Gejala | Penyelesaian |
+|--------|--------------|
+| Laman menunjukkan "404" atau kosong | Tunggu 2 minit lagi (binaan pertama paling lama). Kemudian semak tab **Actions** untuk tanda semak hijau. |
+| Anda nampak senarai folder, bukan aplikasi | Anda memilih cabang/folder yang salah dalam Langkah A — mestilah cabang `master`/`main` dan folder `/ (root)`. |
+| Gaya/bunyi hilang | Pelayar anda menyimpan versi lama — segarkan keras (Ctrl+Shift+R pada desktop). |
+| Merah ✗ dalam Actions | Buka run yang gagal, baca mesej, dan minta bantuan (atau buka isu GitHub). |
+| `NAMA-ANDA.github.io` tidak memuat | Anda perlukan sekurang-kurangnya satu fail dalam akar repo — projek ini sudah ada `index.html`, jadi ini hanya berlaku pada repo kosong. |
+
+### E. Jadikan ia alamat anda sendiri (pilihan)
+
+Anda boleh menggunakan domain tersuai (cth. `makluman.keluargaku.com`) dan bukannya URL lalai:
+
+1. Beli domain daripada mana-mana pendaftar.
+2. Dalam tetapan DNS pendaftar, tambah rekod CNAME menunjuk ke `NAMA-ANDA.github.io`.
+3. Dalam **Settings → Pages → Custom domain**, masukkan domain anda dan klik **Save**.
+4. Aktifkan **Enforce HTTPS** selepas DNS tersebar (beberapa jam).
 
 ---
 
