@@ -13,14 +13,18 @@
  * @param {string} [opts.tags] - Comma-separated ntfy tags (X-Tags), e.g. "loudspeaker".
  * @returns {Promise<boolean>} True when ntfy accepted the publish (res.ok).
  */
+function toHeaderSafe(value) {
+  return [...value].filter((ch) => ch.codePointAt(0) <= 0xff).join("").trim();
+}
+
 export async function sendAlert({ topic, message, title, priority = "default", tags }) {
   const attempts = 3;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
       const headers = {};
-      if (title) headers.Title = title;
-      if (priority) headers.Priority = priority;
-      if (tags) headers.Tags = tags;
+      if (title) headers.Title = toHeaderSafe(title);
+      if (priority) headers.Priority = toHeaderSafe(priority);
+      if (tags) headers.Tags = toHeaderSafe(tags);
 
       const res = await fetch(`https://ntfy.sh/${topic}`, {
         method: "POST",
