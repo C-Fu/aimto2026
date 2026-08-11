@@ -1,5 +1,7 @@
 # Family Alerts 📢
 
+[**Bahasa Melayu**](README.ms-MY.md) | English
+
 A tiny, no-backend web app that lets family members send quick alerts and short messages to each other — with emoji and sound. Fork it, change one setting, and you have your own family alert app.
 
 **Live demo:** https://c-fu.github.io/aimto2026/

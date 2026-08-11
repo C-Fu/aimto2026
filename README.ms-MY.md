@@ -1,5 +1,7 @@
 # Family Alerts 📢
 
+English | [**Bahasa Melayu**](README.md)
+
 Apl web kecil tanpa pelayan (backend) yang membolehkan ahli keluarga menghantar makluman pantas dan mesej pendek antara satu sama lain — dengan emoji dan bunyi. Fork projek ini, ubah satu tetapan, dan anda akan ada apl makluman keluarga anda sendiri.
 
 **Demo langsung:** https://c-fu.github.io/aimto2026/
