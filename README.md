@@ -1,29 +1,110 @@
-# Family Alerts
+# Family Alerts 📢
+
+A tiny, no-backend web app that lets family members send quick alerts and short messages to each other — with emoji and sound. Fork it, change one setting, and you have your own family alert app.
+
+**Live demo:** https://c-fu.github.io/aimto2026/
+
+---
 
 ## What this is
 
-A static single-page family alert site. The sender taps a preset (or types a short emoji message) and it is delivered to the family's ntfy topic. The receiver sees a push notification (ntfy app) or an in-page popup with sound (open browser tab). No backend, no accounts.
+A static single-page website. The sender taps a preset button (or types a short emoji message) and it is instantly delivered to the family's **ntfy topic**. The receiver sees it as a push notification (on the ntfy phone app) or as an in-page popup with a sound (on a browser tab). No backend, no accounts, no sign-ups.
 
-## How it works
+---
 
-- **Send:** the browser POSTs to `https://ntfy.sh/<topic>` with the message, title, and priority.
-- **Receive:** the ntfy app delivers a push, OR the open page subscribes to the topic (Server-Sent Events) and shows a popup with sound. The browser tab must stay open to receive in-page alerts.
+## What is ntfy.sh?
 
-## Setup: your own family topic
+[ntfy.sh](https://ntfy.sh) is a free, open-source "push notification" service — think of it as a **WhatsApp message for your phone, but without any accounts or groups**.
 
-1. Generate a random unguessable topic — use the generator at https://ntfy.sh (or any random string matching `[-_A-Za-z0-9]`, max 64 chars). **The topic is the password: do not use family names.**
-2. Open `config.js` and replace `CONFIG.TOPIC` with your topic.
-3. Commit and deploy.
+### What it does
+- You pick a **topic** — a secret word like `gomokelategomo-sjhasjhsa`. That topic is your "phone number".
+- Any app or website that knows the topic can send a message to it.
+- Anyone subscribed to that topic receives the message instantly as a push notification on their phone or browser.
 
-**Topic rotation:** to revoke a leaked topic, change `CONFIG.TOPIC` here and re-deploy — every device must use the new value.
+### What it can do
+- Send **push notifications** to the ntfy app (Android/iOS) — works even when the app is closed
+- Send messages that show up as **popups with sound** in any open browser tab
+- Set a **title**, **priority** (quiet to very urgent), and **emoji tags**
+- Messages are **fire-and-forget** — no history, no accounts, no tracking
+
+### Why this project uses it
+ntfy is perfect here because it is **free, needs no sign-up, and has no backend**. The whole project is just static files (HTML + JavaScript) that talk directly to ntfy — so it can be hosted for free on GitHub Pages with zero servers to run or bills to pay.
+
+---
+
+## How this project uses ntfy
+
+| Step | What happens |
+|------|--------------|
+| **You tap a preset** (e.g. "🚗 Dad arrived at school") | The page sends a `POST` to `https://ntfy.sh/gomokelategomo-sjhasjhsa` with the message, title, and priority |
+| **Receiver's phone (ntfy app)** | Instantly shows a push notification — high/urgent alerts use louder sounds |
+| **Receiver's browser (this page, open)** | Shows a popup with a three-tone sound + writes to a received-alerts list |
+| **Anyone, anywhere** | Anyone with the topic can also watch it at `https://ntfy.sh/gomokelategomo-sjhasjhsa` in a browser |
+
+**This project's topic:** `gomokelategomo-sjhasjhsa`
+**Watch it here:** https://ntfy.sh/gomokelategomo-sjhasjhsa
+
+> ⚠️ The topic is the password. Anyone who knows it can send to it. Keep it private, and rotate it if it ever leaks (see below).
+
+---
+
+## For non-tech people: how to make this app your own (fork it)
+
+You don't need to write code — you only need to copy ("fork") this project and change one word. Here's the full path from zero to your own family alert app:
+
+### Step 1 — Get a GitHub account
+Go to https://github.com and sign up for a free account (if you don't have one).
+
+### Step 2 — Fork this project
+1. Open the project page: https://github.com/C-Fu/aimto2026
+2. Click the **Fork** button (top-right corner). This creates **your own copy** of the project.
+3. GitHub will take you to your new copy. Its address will look like `https://github.com/YOUR-NAME/aimto2026`.
+
+### Step 3 — Create your own secret topic
+1. Open https://ntfy.sh in a browser and look for the topic name generator (or just make up a long random word with letters, numbers, dashes or underscores — e.g. `myfamily-2026-r7x9k2`).
+2. **Tip:** use something random like `myfamily-r7x9k2-blue-42` — never your family name or phone number.
+
+### Step 4 — Change the topic in your copy
+1. In your forked project, open the file **`config.js`**.
+2. Find the line that says:
+   `TOPIC: "gomokelategomo-sjhasjhsa"`
+3. Replace `gomokelategomo-sjhasjhsa` with **your own secret topic**, e.g.:
+   `TOPIC: "myfamily-r7x9k2-blue-42"`
+4. Click **Commit changes** (green button). Done — you just edited a file!
+
+### Step 5 — Publish your app to the web (free, 5 minutes)
+1. In your fork, open **Settings** → **Pages** (in the left menu).
+2. Under **Source**, choose: **Deploy from a branch**.
+3. Set **Branch** to `master` (or `main`) and folder to `/ (root)`. Click **Save**.
+4. Wait about 1 minute. GitHub will show you your live address — something like `https://YOUR-NAME.github.io/aimto2026/`.
+
+### Step 6 — Tell your family
+1. Send everyone the link to your live site (from Step 5).
+2. Ask them to **install the free ntfy app** (Android or iOS) and subscribe to your topic:
+   open the app → tap **+** → type your topic, e.g. `myfamily-r7x9k2-blue-42`.
+3. Open your site on your phone. Tap a preset or type a message. Everyone who subscribed hears it immediately! 🎉
+
+### Changing the preset buttons (optional, no code)
+Open `config.js` and edit the **`PRESETS`** list — each line is one button. Example:
+```js
+{ id: "school", emoji: "🚗", label: "Dad arrived at school", title: "🚗 Dad arrived", priority: "default" },
+```
+Change the `label` (what the button says), the `emoji`, and the `priority` (`default` = normal, `high` = loud, `urgent` = very loud). Save, commit, and your site updates.
+
+### Rotating a leaked topic
+If your topic leaks, change it back in `config.js` (Step 4), commit, and tell everyone to subscribe to the new one. That instantly revokes the old one.
+
+---
 
 ## Receiver setup (ntfy app)
 
 1. Install the ntfy app (Android / iOS).
-2. Subscribe to your topic: `ntfy.sh/<your-topic>`.
-3. Enable notifications + sound in the app settings. High/urgent alerts use louder sounds — per-priority sounds are configurable in the app.
+2. Subscribe to your topic (the secret word you chose).
+3. Enable notifications + sound in the app settings. High/urgent alerts use louder sounds.
 
-## Run locally
+---
+
+## Run it on your own computer (optional)
 
 ```
 python3 -m http.server 8000
@@ -31,26 +112,43 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
-## Deploy to GitHub Pages
-
-1. Push this repo to GitHub.
-2. Repo → Settings → Pages.
-3. Source: **Deploy from a branch** → branch `master` / `(root)` → Save.
-4. Wait for the Pages build, then open the published URL.
-
-The site is 100% static — no build command, no CI config needed (`.nojekyll` is included).
+---
 
 ## Known limitations
 
 - **Open access** — anyone with the topic can send. Keep it secret.
 - **Fire-and-forget** — alerts are not logged, no message history.
-- **In-page alerts require an open tab.**
+- **In-page alerts require an open tab.** (The ntfy phone app works with the app closed; the browser page does not.)
 - **Delivery depends on the free ntfy.sh service.**
 
-## Demo verification checklist
+---
 
-1. Run the local server, open the page.
-2. Tap a preset — hear the confirmation sound, status shows "Sent ✓".
-3. Open `https://ntfy.sh/<topic>` in another tab — the message with its title appears.
-4. With the page open and subscribed, send from another device — popup + sound.
-5. The ntfy app receives the push.
+## Ideas to make it better (for your own use)
+
+This project is deliberately tiny so you can fork it and build on it. Here are ideas, from easy to more advanced:
+
+- **More presets** — add your family's real messages ("Dinner ready", "I'm home", "Call me"). Just add lines to `PRESETS` in `config.js`.
+- **Two-way chat** — add a sender section for both sides so any family member can reply.
+- **Different sounds per person** — ntfy maps priorities to sounds; give each family member their own priority or their own topic.
+- **Name/avatar per family member** — show who sent the alert in the popup and in the received-alerts list.
+- **Vibration pattern** — trigger a custom vibration with the Web Vibration API on mobile.
+- **Wake lock / keep tab awake** — use the Wake Lock API so the receiver tab doesn't sleep on mobile.
+- **Location preset** — a "Pick me up" button that sends your location link (using the browser's geolocation).
+- **Scheduled or repeat alerts** — e.g. a medication reminder that repeats.
+- **Attachments** — ntfy supports images/files; add a button to send a photo ("Here's what I bought").
+- **UnifiedPush** — integrate ntfy's UnifiedPush for Android to save battery.
+- **Password-protect your topic** — ntfy supports access tokens; add a simple passcode gate if you want more control than "keep it secret".
+- **Message log (optional)** — ntfy keeps recent messages in its web view; decide whether you want a small on-page history.
+
+---
+
+## Tech notes (for curious users)
+
+- 100% static: pure HTML, CSS, vanilla JavaScript. No build step.
+- Hosted on GitHub Pages (free). PWA installable (add to home screen).
+- Talks to ntfy via simple HTTPS calls (`fetch` POST to publish, Server-Sent Events to receive).
+- No frameworks, no dependencies, no cookies, no tracking.
+
+---
+
+*Made for the family. Fork it, make it yours.*
