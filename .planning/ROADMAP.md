@@ -6,7 +6,7 @@ A single-phase demo roadmap. Build and deploy a static, frontend-only single-pag
 
 ## Phases
 
-- [ ] **Phase 1: One-Tap Family Alert Page** - Complete static alert site: one-tap preset/custom sends with confirmation sound, receiver push/popup with sound, per-pair ntfy topic config, GitHub Pages deploy.
+- [x] **Phase 1: One-Tap Family Alert Page** - Complete static alert site: one-tap preset/custom sends with confirmation sound, receiver push/popup with sound, per-pair ntfy topic config, GitHub Pages deploy. (complete 2026-08-11)
 
 ## Phase Details
 
@@ -23,10 +23,10 @@ A single-phase demo roadmap. Build and deploy a static, frontend-only single-pag
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01: Static page shell — index.html + style.css (mobile-first, emoji-friendly sender UI)
-- [ ] 01-02: ntfy send — preset buttons + custom message via fetch POST with title/sound
-- [ ] 01-03: Receiver view — topic subscription (SSE) with popup + alert sound
-- [ ] 01-04: Config & deploy — per-pair topic constant + GitHub Pages static verification
+- [x] 01-01: Static page shell — index.html + style.css (mobile-first, emoji-friendly sender UI)
+- [x] 01-02: ntfy send — preset buttons + custom message via fetch POST with title/sound
+- [x] 01-03: Receiver view — topic subscription (SSE) with popup + alert sound (+ PWA receiver page)
+- [x] 01-04: Config & deploy — per-pair topic constant + GitHub Pages static verification
 **UI hint**: yes
 
 ## Progress
@@ -36,4 +36,4 @@ Phases execute in numeric order: 1
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. One-Tap Family Alert Page | 0/4 | Not started | - |
+| 1. One-Tap Family Alert Page | 4/4 | ✓ Complete | 2026-08-11 |

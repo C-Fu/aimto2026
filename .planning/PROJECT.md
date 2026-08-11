@@ -12,16 +12,16 @@ A family member can send an alert that reliably reaches another family member wi
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Sender can send a preset alert (e.g. "Dad arrived at school") with one tap — Phase 1
+- ✓ Sender can send a short custom message with emoji — Phase 1
+- ✓ Sent alerts trigger a push notification with sound on the receiver's device — Phase 1
+- ✓ Each sender/receiver pair uses its own ntfy topic — Phase 1
+- ✓ The page can be deployed as static files on GitHub Pages — Phase 1
+- ✓ No login or accounts required — Phase 1
 
 ### Active
 
-- [ ] Sender can send a preset alert (e.g. "Dad arrived at school") with one tap
-- [ ] Sender can send a short custom message with emoji
-- [ ] Sent alerts trigger a push notification with sound on the receiver's device
-- [ ] Each sender/receiver pair uses its own ntfy topic
-- [ ] The page can be deployed as static files on GitHub Pages
-- [ ] No login or accounts required
+- (None — demo shipped)
 
 ### Out of Scope
 
@@ -51,7 +51,10 @@ A family member can send an alert that reliably reaches another family member wi
 | Static HTML/CSS/JS + GitHub Pages | Zero hosting cost, instant deploy, no backend | — Pending |
 | ntfy.sh for messaging | Free push notifications, no accounts, simple REST API | — Pending |
 | Open access (no auth) | Maximum simplicity; topic name acts as the shared secret | — Pending |
-| Demo scope in one phase | 20-minute target | — Pending |
+| Demo scope in one phase | 20-minute target | ✓ Good |
+| Topic set to `gomokelategomo-sjhasjhsa` | Replace demo placeholder with a private family topic | ✓ Good |
+| Header values sanitized to ISO-8859-1 | Emoji in ntfy Title header crashed fetch | ✓ Good |
+| PWA receiver page (open-tab) instead of Web Push | ntfy background push requires same-server hosting, unavailable on GitHub Pages | — Pending |
 
 ---
-*Last updated: 2026-08-11 after initialization*
+*Last updated: 2026-08-11 after Phase 1 completion*
