@@ -167,3 +167,9 @@ popupClose.addEventListener("click", hidePopup);
 subscribeTopic(CONFIG.TOPIC, ({ title, message }) => {
   showPopup(title, message);
 });
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js").catch((err) => {
+    console.error("service worker registration failed:", err);
+  });
+}

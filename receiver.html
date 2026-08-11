@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Family Alerts</title>
+  <meta name="theme-color" content="#F97316">
+  <title>Family Alerts — Receiver</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📢</text></svg>">
   <link rel="stylesheet" href="style.css">
@@ -11,24 +12,20 @@
 <body>
   <main>
     <header>
-      <h1 id="app-title">Family Alerts 👨‍👩‍👧</h1>
+      <h1 id="app-title">Family Alerts 📢</h1>
     </header>
-
-    <section id="sender">
-      <h2>Send an alert</h2>
-      <div id="preset-grid"></div>
-      <form id="custom-form">
-        <label for="custom-input">Custom message</label>
-        <input type="text" id="custom-input" maxlength="200" placeholder="Type a short message… (up to 200 characters)" autocomplete="off">
-        <span id="char-count" aria-hidden="true"></span>
-        <button type="submit" id="send-btn">Send</button>
-      </form>
-      <p id="status" aria-live="polite" role="status"></p>
-    </section>
 
     <section id="receiver">
       <h2>Receiving alerts</h2>
-      <p id="receiver-hint">Keep this tab open to receive alerts. Or install the ntfy app and subscribe to your topic.</p>
+      <p id="receiver-hint">Keep this page open (or install it) to receive alerts from the family topic.</p>
+      <p id="notify-status" role="status" aria-live="polite"></p>
+      <button type="button" id="notify-btn">Enable notification sound</button>
+    </section>
+
+    <section id="history-section">
+      <h2>Received alerts</h2>
+      <ul id="alert-history"></ul>
+      <p id="history-empty">No alerts yet.</p>
     </section>
   </main>
 
@@ -40,6 +37,6 @@
     </div>
   </div>
 
-  <script type="module" src="script.js"></script>
+  <script type="module" src="receiver.js"></script>
 </body>
 </html>

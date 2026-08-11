@@ -1,0 +1,17 @@
+{
+  "name": "Family Alerts Receiver",
+  "short_name": "Alerts",
+  "description": "Receiver page for family alerts — popup + sound + notifications via ntfy.",
+  "start_url": "receiver.html",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#F97316",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
