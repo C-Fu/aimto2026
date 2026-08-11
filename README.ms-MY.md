@@ -2,7 +2,7 @@
 
 English | [**Bahasa Melayu**](README.md)
 
-Apl web kecil tanpa pelayan (backend) yang membolehkan ahli keluarga menghantar makluman pantas dan mesej pendek antara satu sama lain — dengan emoji dan bunyi. Fork projek ini, ubah satu tetapan, dan anda akan ada apl makluman keluarga anda sendiri.
+Aplikasi web kecil tanpa pelayan (backend) yang membolehkan ahli keluarga menghantar makluman pantas dan mesej pendek antara satu sama lain — dengan emoji dan bunyi. Fork projek ini, ubah satu tetapan, dan anda akan ada aplikasi makluman keluarga anda sendiri.
 
 **Demo langsung:** https://c-fu.github.io/aimto2026/
 
@@ -26,7 +26,7 @@ Apl web kecil tanpa pelayan (backend) yang membolehkan ahli keluarga menghantar 
 
 ## Apa ini
 
-Sebuah laman web statik satu halaman. Pengirim menekan butang pratetap (atau menaip mesej emoji pendek) dan ia terus sampai ke **topik ntfy** keluarga. Penerima melihatnya sebagai pemberitahuan push (pada apl ntfy telefon) atau sebagai popup dalam laman dengan bunyi (pada tab pelayar). Tiada pelayan belakang, tiada akaun, tiada pendaftaran.
+Sebuah laman web statik satu halaman. Pengirim menekan butang pratetap (atau menaip mesej emoji pendek) dan ia terus sampai ke **topik ntfy** keluarga. Penerima melihatnya sebagai pemberitahuan push (pada aplikasi ntfy telefon) atau sebagai popup dalam laman dengan bunyi (pada tab pelayar). Tiada pelayan belakang, tiada akaun, tiada pendaftaran.
 
 ---
 
@@ -36,11 +36,11 @@ Sebuah laman web statik satu halaman. Pengirim menekan butang pratetap (atau men
 
 ### Apa yang ia lakukan
 - Anda pilih **topik** — satu perkataan rahsia seperti `gomokelategomo-sjhasjhsa`. Topik itu adalah "nombor telefon" anda.
-- Mana-mana apl atau laman web yang tahu topik itu boleh menghantar mesej kepadanya.
+- Mana-mana aplikasi atau laman web yang tahu topik itu boleh menghantar mesej kepadanya.
 - Sesiapa yang melanggan topik itu menerima mesej serta-merta sebagai pemberitahuan push pada telefon atau pelayar.
 
 ### Apa yang ia boleh buat
-- Menghantar **pemberitahuan push** ke apl ntfy (Android/iOS) — berfungsi walaupun apl ditutup
+- Menghantar **pemberitahuan push** ke aplikasi ntfy (Android/iOS) — berfungsi walaupun aplikasi ditutup
 - Menghantar mesej yang muncul sebagai **popup dengan bunyi** pada mana-mana tab pelayar yang dibuka
 - Menetapkan **tajuk**, **keutamaan** (senyap hingga sangat segera), dan **tag emoji**
 - Mesej bersifat **sekejap** — tiada sejarah, tiada akaun, tiada penjejakan
@@ -55,7 +55,7 @@ ntfy sesuai di sini kerana ia **percuma, tanpa pendaftaran, dan tiada pelayan be
 | Langkah | Apa yang berlaku |
 |---------|------------------|
 | **Anda tekan pratetap** (cth. "🚗 Ayah sampai sekolah") | Laman menghantar `POST` ke `https://ntfy.sh/gomokelategomo-sjhasjhsa` dengan mesej, tajuk, dan keutamaan |
-| **Telefon penerima (apl ntfy)** | Serta-merta memaparkan pemberitahuan push — makluman tinggi/segera menggunakan bunyi lebih kuat |
+| **Telefon penerima (aplikasi ntfy)** | Serta-merta memaparkan pemberitahuan push — makluman tinggi/segera menggunakan bunyi lebih kuat |
 | **Pelayar penerima (laman ini, dibuka)** | Memaparkan popup dengan bunyi tiga nada + menulis ke senarai makluman diterima |
 | **Sesiapa, di mana sahaja** | Sesiapa yang ada topik itu juga boleh menontonnya di `https://ntfy.sh/gomokelategomo-sjhasjhsa` dalam pelayar |
 
@@ -66,9 +66,9 @@ ntfy sesuai di sini kerana ia **percuma, tanpa pendaftaran, dan tiada pelayan be
 
 ---
 
-## Untuk bukan-ahli teknikal: bagaimana menjadikan apl ini milik anda (fork)
+## Untuk bukan-ahli teknikal: bagaimana menjadikan aplikasi ini milik anda (fork)
 
-Anda tidak perlu menulis kod — anda hanya perlu menyalin ("fork") projek ini dan menukar satu perkataan. Ini laluan penuh daripada kosong kepada apl makluman keluarga anda sendiri:
+Anda tidak perlu menulis kod — anda hanya perlu menyalin ("fork") projek ini dan menukar satu perkataan. Ini laluan penuh daripada kosong kepada aplikasi makluman keluarga anda sendiri:
 
 ### Langkah 1 — Buka akaun GitHub
 Pergi ke https://github.com dan daftar akaun percuma (jika anda belum ada).
@@ -90,7 +90,7 @@ Pergi ke https://github.com dan daftar akaun percuma (jika anda belum ada).
    `TOPIC: "keluarga-r7x9k2-biru-42"`
 4. Klik **Commit changes** (butang hijau). Siap — anda baru sahaja mengedit fail!
 
-### Langkah 5 — Terbitkan apl anda ke web (percuma, 5 minit)
+### Langkah 5 — Terbitkan aplikasi anda ke web (percuma, 5 minit)
 1. Dalam fork anda, buka **Settings** → **Pages** (dalam menu kiri).
 2. Di bawah **Source**, pilih: **Deploy from a branch**.
 3. Tetapkan **Branch** kepada `master` (atau `main`) dan folder kepada `/ (root)`. Klik **Save**.
@@ -98,8 +98,8 @@ Pergi ke https://github.com dan daftar akaun percuma (jika anda belum ada).
 
 ### Langkah 6 — Beritahu keluarga anda
 1. Hantar semua orang pautan ke laman langsung anda (dari Langkah 5).
-2. Minta mereka **pasang apl ntfy percuma** (Android atau iOS) dan melanggan topik anda:
-   buka apl → tekan **+** → taip topik anda, cth. `keluarga-r7x9k2-biru-42`.
+2. Minta mereka **pasang aplikasi ntfy percuma** (Android atau iOS) dan melanggan topik anda:
+   buka aplikasi → tekan **+** → taip topik anda, cth. `keluarga-r7x9k2-biru-42`.
 3. Buka laman anda pada telefon. Tekan pratetap atau taip mesej. Semua yang melanggan akan mendengarnya serta-merta! 🎉
 
 ### Menukar butang pratetap (pilihan, tanpa kod)
@@ -114,11 +114,11 @@ Jika topik anda bocor, tukar kembali dalam `config.js` (Langkah 4), commit, dan 
 
 ---
 
-## Penyediaan penerima (apl ntfy)
+## Penyediaan penerima (aplikasi ntfy)
 
-1. Pasang apl ntfy (Android / iOS).
+1. Pasang aplikasi ntfy (Android / iOS).
 2. Langgan topik anda (perkataan rahsia yang anda pilih).
-3. Aktifkan pemberitahuan + bunyi dalam tetapan apl. Makluman tinggi/segera menggunakan bunyi lebih kuat.
+3. Aktifkan pemberitahuan + bunyi dalam tetapan aplikasi. Makluman tinggi/segera menggunakan bunyi lebih kuat.
 
 ---
 
@@ -136,7 +136,7 @@ Kemudian buka http://localhost:8000.
 
 - **Akses terbuka** — sesiapa yang ada topik boleh menghantar. Simpan rahsia.
 - **Sekejap** — makluman tidak direkod, tiada sejarah mesej.
-- **Makluman dalam laman memerlukan tab terbuka.** (Apl ntfy telefon berfungsi dengan apl ditutup; laman pelayar tidak.)
+- **Makluman dalam laman memerlukan tab terbuka.** (Aplikasi ntfy telefon berfungsi dengan aplikasi ditutup; laman pelayar tidak.)
 - **Penghantaran bergantung pada perkhidmatan percuma ntfy.sh.**
 
 ---
