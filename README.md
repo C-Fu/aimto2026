@@ -8,9 +8,36 @@ A tiny, no-backend web app that lets family members send quick alerts and short 
 
 ---
 
+## Checklist To Start
+
+1. OpenCode - (https://opencode.ai/download)
+<img width="566" height="181" alt="image" src="https://github.com/user-attachments/assets/e4d1dffc-9b4a-40db-bc3f-1402055fffe5" />
+
+3. WinGet – Windows 11, Windows 10 (Preinstalled)
+4. NVM, npx, npm, node
+- (https://github.com/coreybutler/nvm-windows/)
+--Or--
+```
+winget install -e --id CoreyButler.NVMforWindows
+```
+<img width="731" height="146" alt="image" src="https://github.com/user-attachments/assets/c2cbfaa7-02e3-4c54-8854-23291462241e" />
+
+4. gsd-opencode
+```
+npx gsd-opencode
+npm i -g gsd-opencode
+```
+<img width="468" height="428" alt="image" src="https://github.com/user-attachments/assets/14970c62-0259-4f89-93c6-55fcbd7f918a" />
+
+5.Microsoft Copilot (Or Gemini)
+
+<img width="287" height="246" alt="image" src="https://github.com/user-attachments/assets/3476ee55-b786-4585-8cd6-1faf9840c789" />
+
+---
+
 ## 📽️ Media & pitch materials
 
-**Watch the demo (2 min):**
+**Watch the demo (2 min):** Family_Alert_System.mp4
 
 <video src="Family_Alert_System.mp4" controls style="max-width:100%;"></video>
 
